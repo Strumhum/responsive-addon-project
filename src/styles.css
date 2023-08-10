@@ -82,6 +82,14 @@ a.button {
   background: var(--accent-color);
   padding: 16px 32px;
   margin: 40px auto;
+  border-radius: 5px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+a.button:hover {
+  color: var(--accent-color);
+  background: var(--text-color-light);
 }
 
 @media (max-width: 1300px) {
