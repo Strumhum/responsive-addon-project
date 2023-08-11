@@ -13,11 +13,16 @@
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 100px;
+}
+
+section.blue-bg {
+  background: var(--light-blue-color);
 }
 
 h1,
-h3 {
+h3,
+h6 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -82,6 +87,12 @@ h5 {
   margin: 0;
 }
 
+h6 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 p {
   font-size: 18px;
   font-weight: 300;
@@ -137,6 +148,22 @@ footer li {
   max-width: 100%;
 }
 
+.embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-center {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
 .hero-caption {
   display: inline-flex;
   padding: 20% 5% 6% 5%;
@@ -178,8 +205,46 @@ a.button:hover {
   grid-gap: 64px;
 }
 
+.grid-3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 60px;
+  grid-gap: 30px;
+}
+
+.blue-bg {
+  padding: o;
+}
+
 .why-text {
   padding: 8% 02%;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px 0px rgba(7, 5, 20, 0.05);
+  background: var(--text-color-light);
+}
+
+.card h6 {
+  margin: 0 0 8px 0;
+}
+
+.card p {
+  margin-top: 0;
+}
+
+.card-body {
+  padding: 32px 32px 0 32px;
+}
+
+.card-footer {
+  padding: 10px 32px 24px;
+}
+
+.card-button {
+  display: block;
+  margin: 0 auto !important;
+  text-align: center;
 }
 
 .footer-grid {
@@ -191,6 +256,11 @@ a.button:hover {
   margin-bottom: 60px;
 }
 
+.smaller {
+  font-size: 16px;
+}
+
+/* Responsive styling */
 @media (max-width: 1300px) {
   header {
     padding: 4% 0 0;
@@ -215,11 +285,11 @@ a.button:hover {
   .footer-grid {
     margin: 0 5%;
   }
+  .grid-3-cols {
+    padding: 0;
+  }
 }
 @media (max-width: 1200px) {
-  .container {
-    padding: 40px;
-  }
   footer {
     padding: 50px 0;
   }
@@ -229,6 +299,9 @@ a.button:hover {
   }
   p {
     font-size: 17px;
+  }
+  section {
+    padding: 80px;
   }
   .grid-2-cols {
     padding: 30px 40px;
@@ -241,7 +314,13 @@ a.button:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1126px) {
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 915px) {
   header {
     padding: 6% 0 5%;
   }
@@ -257,6 +336,9 @@ a.button:hover {
   footer {
     padding: 40px 0;
   }
+  section {
+    padding: 40px;
+  }
   a.button {
     font-size: 12px;
     padding: 14px 24px;
@@ -265,7 +347,7 @@ a.button:hover {
     margin-bottom: 2%;
   }
   .grid-2-cols {
-    padding: 20px 40px;
+    padding: 40px 40px 60px 40px;
     grid-template-columns: 1fr;
   }
   .grid-2-cols img {
@@ -299,5 +381,14 @@ a.button:hover {
   .hero-caption {
     padding-top: 36%;
     gap: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blue-bg {
+    padding: 50px 30px;
+  }
+  .footer-grid {
+    margin: 0;
   }
 }
