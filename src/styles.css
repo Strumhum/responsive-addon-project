@@ -56,12 +56,13 @@ h2 {
 h3 {
   font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--text-color-dark);
+  margin: 6px auto 32px;
 }
 
 h4 {
-  font-family: Monts;
+  font-family: "Karla", sans-serif;
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
@@ -69,9 +70,26 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-left: 5px solid var(--accent-color);
+  padding: 2px 0px 2px 16px;
+  margin: 0;
+}
+
 p {
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.5;
+}
+
+main p {
+  opacity: 0.7;
 }
 
 footer {
@@ -84,6 +102,7 @@ footer {
 
 footer h4 {
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -114,6 +133,10 @@ footer li {
   padding: 0;
 }
 
+.img-responsive {
+  max-width: 100%;
+}
+
 .hero-caption {
   display: inline-flex;
   padding: 20% 5% 6% 5%;
@@ -142,12 +165,30 @@ a.button {
 a.button:hover {
   color: var(--accent-color);
   background: var(--text-color-light);
+  border: 1px solid var(--accent-color);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+  padding: 100px 0;
+  grid-gap: 64px;
+}
+
+.why-text {
+  padding: 8% 02%;
 }
 
 .footer-grid {
-  display: grid;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-gap: 30px;
+  grid-gap: 50px;
+}
+
+.last-p {
+  margin-bottom: 60px;
 }
 
 @media (max-width: 1300px) {
@@ -182,6 +223,22 @@ a.button:hover {
   footer {
     padding: 50px 0;
   }
+  h3 {
+    font-size: 38px;
+    margin: 6px auto 20px;
+  }
+  p {
+    font-size: 17px;
+  }
+  .grid-2-cols {
+    padding: 30px 40px;
+  }
+  .why-text {
+    padding: 3% 2%;
+  }
+  .last-p {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -202,10 +259,18 @@ a.button:hover {
   }
   a.button {
     font-size: 12px;
-    padding: 12px 24px;
+    padding: 14px 24px;
   }
   .hero-caption {
     margin-bottom: 2%;
+  }
+  .grid-2-cols {
+    padding: 20px 40px;
+    grid-template-columns: 1fr;
+  }
+  .grid-2-cols img {
+    display: block;
+    margin: 0 auto;
   }
   .footer-grid {
     grid-template-columns: none;
@@ -230,7 +295,6 @@ a.button:hover {
   }
   a.button {
     font-size: 10px;
-    padding: 12px 24px;
   }
   .hero-caption {
     padding-top: 36%;
